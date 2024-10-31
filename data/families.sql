@@ -30,6 +30,7 @@ CREATE TABLE Members (
     income DECIMAL(10, 2) NOT NULL,
     hobbies TEXT,
 
+    FULLTEXT(hobbies), 
     PRIMARY KEY (family_id, member_id),
     FOREIGN KEY (family_id) REFERENCES Families(family_id) ON DELETE CASCADE
 );
@@ -98,3 +99,9 @@ INSERT INTO Pets (family_id, pet_id, pet_type, pet_name) VALUES
 ('F007', 'P006', 'Dog', 'Rocky'),
 ('F008', 'P007', 'Fish', 'Nemo'),
 ('F010', 'P008', 'Rabbit', 'Fluffy');
+
+SELECT * FROM Members 
+WHERE MATCH(hobbies) AGAINST('Reading' IN NATURAL LANGUAGE MODE);
+
+SELECT * FROM Members 
+WHERE MATCH(hobbies) AGAINST('+fishing -reading' IN BOOLEAN MODE);
