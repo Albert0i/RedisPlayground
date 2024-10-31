@@ -1,0 +1,381 @@
+{
+    "families": [
+        {
+            "familyId": "F001",
+            "familyName": "Smith",
+            "address": {
+                "street": "123 Maple St",
+                "city": "Springfield",
+                "state": "IL",
+                "zipCode": "62701"
+            },
+            "totalIncome": 120000,
+            "rent": 1500,
+            "familySize": 2,
+            "members": [
+                {
+                    "memberId": "M001",
+                    "name": "John Smith",
+                    "gender": "Male",
+                    "relationship": "Father",
+                    "profession": "Engineer",
+                    "birthday": 19800515,
+                    "income": 80000,
+                    "hobbies": ["Fishing", "Reading"]
+                },
+                {
+                    "memberId": "M002",
+                    "name": "Emily Smith",
+                    "gender": "Female",
+                    "relationship": "Mother",
+                    "profession": "Teacher",
+                    "birthday": 19830322,
+                    "income": 40000,
+                    "hobbies": ["Dance", "Painting"]
+                }
+            ],
+            "pets": [
+                {
+                    "petId": "P001",
+                    "type": "Dog",
+                    "name": "Buddy"
+                }
+            ]
+        },
+        {
+            "familyId": "F002",
+            "familyName": "Johnson",
+            "address": {
+                "street": "456 Oak St",
+                "city": "Lincoln",
+                "state": "NE",
+                "zipCode": "68502"
+            },
+            "totalIncome": 100000,
+            "rent": 1400,
+            "familySize": 2,
+            "members": [
+                {
+                    "memberId": "M003",
+                    "name": "Michael Johnson",
+                    "gender": "Male",
+                    "relationship": "Father",
+                    "profession": "Doctor",
+                    "birthday": 19781230,
+                    "income": 95000,
+                    "hobbies": ["Cycling"]
+                },
+                {
+                    "memberId": "M004",
+                    "name": "David Johnson",
+                    "gender": "Male",
+                    "relationship": "Son",
+                    "profession": "Student",
+                    "birthday": 20050115,
+                    "income": 0,
+                    "hobbies": ["Video Games", "Soccer"]
+                }
+            ],
+            "pets": []
+        },
+        {
+            "familyId": "F003",
+            "familyName": "Williams",
+            "address": {
+                "street": "789 Pine St",
+                "city": "Omaha",
+                "state": "NE",
+                "zipCode": "68102"
+            },
+            "totalIncome": 60000,
+            "rent": 1200,
+            "familySize": 1,
+            "members": [
+                {
+                    "memberId": "M005",
+                    "name": "Robert Williams",
+                    "gender": "Male",
+                    "relationship": "Father",
+                    "profession": "Chef",
+                    "birthday": 19850512,
+                    "income": 60000,
+                    "hobbies": ["Cooking"]
+                }
+            ],
+            "pets": [
+                {
+                    "petId": "P002",
+                    "type": "Cat",
+                    "name": "Whiskers"
+                },
+                {
+                    "petId": "P003",
+                    "type": "Parrot",
+                    "name": "Polly"
+                }
+            ]
+        },
+        {
+            "familyId": "F004",
+            "familyName": "Brown",
+            "address": {
+                "street": "321 Birch St",
+                "city": "Des Moines",
+                "state": "IA",
+                "zipCode": "50309"
+            },
+            "totalIncome": 75000,
+            "rent": 1300,
+            "familySize": 2,
+            "members": [
+                {
+                    "memberId": "M006",
+                    "name": "Sarah Brown",
+                    "gender": "Female",
+                    "relationship": "Mother",
+                    "profession": "Photographer",
+                    "birthday": 19900101,
+                    "income": 45000,
+                    "hobbies": ["Photography", "Traveling"]
+                },
+                {
+                    "memberId": "M007",
+                    "name": "Tom Brown",
+                    "gender": "Male",
+                    "relationship": "Son",
+                    "profession": "Student",
+                    "birthday": 20030214,
+                    "income": 0,
+                    "hobbies": ["Running", "Writing"]
+                }
+            ],
+            "pets": [
+                {
+                    "petId": "P004",
+                    "type": "Dog",
+                    "name": "Max"
+                }
+            ]
+        },
+        {
+            "familyId": "F005",
+            "familyName": "Garcia",
+            "address": {
+                "street": "654 Cedar St",
+                "city": "Chicago",
+                "state": "IL",
+                "zipCode": "60604"
+            },
+            "totalIncome": 95000,
+            "rent": 1600,
+            "familySize": 2,
+            "members": [
+                {
+                    "memberId": "M008",
+                    "name": "Luis Garcia",
+                    "gender": "Male",
+                    "relationship": "Father",
+                    "profession": "Software Developer",
+                    "birthday": 19880525,
+                    "income": 70000,
+                    "hobbies": ["Gaming", "Cooking"]
+                },
+                {
+                    "memberId": "M009",
+                    "name": "Maria Garcia",
+                    "gender": "Female",
+                    "relationship": "Mother",
+                    "profession": "Nurse",
+                    "birthday": 19891210,
+                    "income": 25000,
+                    "hobbies": ["Gardening"]
+                }
+            ],
+            "pets": []
+        },
+        {
+            "familyId": "F006",
+            "familyName": "Martinez",
+            "address": {
+                "street": "123 Elm St",
+                "city": "Phoenix",
+                "state": "AZ",
+                "zipCode": "85001"
+            },
+            "totalIncome": 70000,
+            "rent": 1100,
+            "familySize": 1,
+            "members": [
+                {
+                    "memberId": "M010",
+                    "name": "Carlos Martinez",
+                    "gender": "Male",
+                    "relationship": "Father",
+                    "profession": "Sales Manager",
+                    "birthday": 19770520,
+                    "income": 60000,
+                    "hobbies": ["Fishing", "Hiking"]
+                }
+            ],
+            "pets": [
+                {
+                    "petId": "P005",
+                    "type": "Cat",
+                    "name": "Luna"
+                }
+            ]
+        },
+        {
+            "familyId": "F007",
+            "familyName": "Davis",
+            "address": {
+                "street": "987 Walnut St",
+                "city": "Atlanta",
+                "state": "GA",
+                "zipCode": "30301"
+            },
+            "totalIncome": 130000,
+            "rent": 2000,
+            "familySize": 2,
+            "members": [
+                {
+                    "memberId": "M011",
+                    "name": "James Davis",
+                    "gender": "Male",
+                    "relationship": "Father",
+                    "profession": "Architect",
+                    "birthday": 19800228,
+                    "income": 90000,
+                    "hobbies": ["Swimming", "Cycling"]
+                },
+                {
+                    "memberId": "M012",
+                    "name": "Linda Davis",
+                    "gender": "Female",
+                    "relationship": "Mother",
+                    "profession": "Writer",
+                    "birthday": 19850315,
+                    "income": 40000,
+                    "hobbies": ["Yoga", "Painting"]
+                }
+            ],
+            "pets": [
+                {
+                    "petId": "P006",
+                    "type": "Dog",
+                    "name": "Rocky"
+                }
+            ]
+        },
+        {
+            "familyId": "F008",
+            "familyName": "Miller",
+            "address": {
+                "street": "555 Oak St",
+                "city": "Seattle",
+                "state": "WA",
+                "zipCode": "98101"
+            },
+            "totalIncome": 50000,
+            "rent": 900,
+            "familySize": 1,
+            "members": [
+                {
+                    "memberId": "M013",
+                    "name": "Brian Miller",
+                    "gender": "Male",
+                    "relationship": "Father",
+                    "profession": "Graphic Designer",
+                    "birthday": 19930110,
+                    "income": 50000,
+                    "hobbies": ["Basketball", "Reading"]
+                }
+            ],
+            "pets": [
+                {
+                    "petId": "P007",
+                    "type": "Fish",
+                    "name": "Nemo"
+                }
+            ]
+        },
+        {
+            "familyId": "F009",
+            "familyName": "Wilson",
+            "address": {
+                "street": "888 Pine St",
+                "city": "Dallas",
+                "state": "TX",
+                "zipCode": "75201"
+            },
+            "totalIncome": 85000,
+            "rent": 1700,
+            "familySize": 2,
+            "members": [
+                {
+                    "memberId": "M014",
+                    "name": "Anna Wilson",
+                    "gender": "Female",
+                    "relationship": "Mother",
+                    "profession": "Baker",
+                    "birthday": 19850505,
+                    "income": 40000,
+                    "hobbies": ["Baking", "Knitting"]
+                },
+                {
+                    "memberId": "M015",
+                    "name": "Peter Wilson",
+                    "gender": "Male",
+                    "relationship": "Father",
+                    "profession": "Consultant",
+                    "birthday": 19800214,
+                    "income": 45000,
+                    "hobbies": ["Golfing", "Traveling"]
+                }
+            ],
+            "pets": []
+        },
+        {
+            "familyId": "F010",
+            "familyName": "Taylor",
+            "address": {
+                "street": "246 Ash St",
+                "city": "Miami",
+                "state": "FL",
+                "zipCode": "33101"
+            },
+            "totalIncome": 90000,
+            "rent": 1800,
+            "familySize": 2,
+            "members": [
+                {
+                    "memberId": "M016",
+                    "name": "Jessica Taylor",
+                    "gender": "Female",
+                    "relationship": "Daughter",
+                    "profession": "Student",
+                    "birthday": 20010530,
+                    "income": 0,
+                    "hobbies": ["Dancing", "Singing"]
+                },
+                {
+                    "memberId": "M017",
+                    "name": "Mark Taylor",
+                    "gender": "Male",
+                    "relationship": "Father",
+                    "profession": "Photographer",
+                    "birthday": 19870318,
+                    "income": 60000,
+                    "hobbies": ["Cycling", "Photography"]
+                }
+            ],
+            "pets": [
+                {
+                    "petId": "P008",
+                    "type": "Rabbit",
+                    "name": "Fluffy"
+                }
+            ]
+        }
+    ]
+}

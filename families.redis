@@ -1,0 +1,81 @@
+
+FT.INFO familyIndex 
+
+FT.DROPINDEX familyIndex
+
+FT.CREATE familyIndex ON JSON PREFIX 1 family: SCHEMA    
+    $.familyName AS FNAME TEXT
+    $.address.street AS STREET TEXT
+    $.address.city AS CITY TAG
+    $.address.state AS STATE TAG 
+    $.address.zipCode AS ZIPCODE TAG
+    $.totalIncome AS TOTALINCOME NUMERIC
+    $.rent AS RENT NUMERIC
+    $.familySize AS FAMILYSIZE NUMERIC
+    $.members[*].memberId AS MEMBERID TAG
+    $.members[*].name AS MNAME TEXT
+    $.members[*].gender AS GENDER TAG
+    $.members[*].relationship AS RELATIONALSHIP TAG
+    $.members[*].profession AS PROFESSION TEXT
+    $.members[*].birthday AS BIRTHDAY NUMERIC   
+    $.members[*].income AS INCOME NUMERIC
+    $.members[*].hobbies[*] AS HOBBY TAG
+    $.pets[*].petId AS PETID TAG
+    $.pets[*].type AS PETTYPE TAG
+    $.pets[*].name AS PETNAME TEXT
+
+
+FT.SEARCH familyIndex "@FIRSTNAME:(John)" RETURN 2 $.familyNumber $.members
+
+FT.SEARCH familyIndex "@FIRSTNAME:(John | Robert)" RETURN 2 $.familyNumber $.members
+
+FT.SEARCH familyIndex "@PETTREATS:{Chicken}" RETURN 2 $.familyNumber $.pets
+
+FT.SEARCH familyIndex "@BIRTHDAY:[20180101 +inf]" RETURN 3 $.familyNumber $.familySize $.members[4].birthday
+
+FT.SEARCH familyIndex "@BIRTHDAY:[20180101 +inf]" RETURN 3 $.familyNumber $.familySize $.members[*].birthday
+
+
+
+
+
+FT.CREATE familyIndex ON JSON PREFIX 1 family: SCHEMA 
+    $.familyName TEXT 
+    $.members[*].name AS NAME TEXT 
+    $.members[*].hobbies[*] AS HOBBY TAG
+
+JSON.SET family:1 . '{"familyName": "Smith", "members": [{"name": "John Smith", "hobbies": ["Fishing", "Reading"]}, {"name": "Emily Smith", "hobbies": ["Dance", "Painting"]}]}'
+
+JSON.SET family:2 . '{"familyName": "Johnson", "members": [{"name": "Michael Johnson", "hobbies": ["Cycling"]}, {"name": "David Johnson", "hobbies": ["Video Games", "Soccer"]}]}'
+
+FT.SEARCH familyIndex '@NAME:(David)' RETURN 3 $.familyName $.members[*].name $.members[*].hobbies
+
+FT.SEARCH familyIndex '@HOBBY:{Fishing}' RETURN 3 $.familyName $.members[*].name $.members[*].hobbies
+1) "1"
+2) "family:1"
+3) 1) "$.familyName"
+   2) "Smith"
+   3) "$.members[*].name"
+   4) "John Smith"
+   5) "$.members[*].hobbies"
+   6) "[\"Fishing\",\"Reading\"]"
+
+
+
+FT.SEARCH
+https://redis.io/docs/latest/commands/ft.search/
+
+FT.CREATE familyIndex ON JSON PREFIX 1 family: SCHEMA 
+    $.familyName TEXT 
+    $.members[*].name AS NAME TEXT
+    $.members[*].hobbies[*] AS HOBBY TAG
+
+JSON.SET family:1 . '{"familyName": "Smith", "members": [{"name": "John Smith", "hobbies": ["Fishing", "Reading"]}, {"name": "Emily Smith", "hobbies": ["Dance", "Painting"]}]}'
+
+JSON.SET family:2 . '{"familyName": "Johnson", "members": [{"name": "Michael Johnson", "hobbies": ["Cycling"]}, {"name": "David Johnson", "hobbies": ["Video Games", "Soccer"]}]}'
+
+FT.SEARCH familyIndex '@NAME:(David)' RETURN 2 $.familyName $.members[*]
+
+FT.SEARCH familyIndex '@HOBBY:{Soccer}' RETURN 3 $.familyName $.members[*].name $.members[*].hobbies
+
+FT.SEARCH familyIndex '@HOBBY:{Painting}' RETURN 3 $.familyName $.members[*].name $.members[*].hobbies
