@@ -1,6 +1,6 @@
 
 +-----------+     1     +-------------+
-| Addresses |<----------|  Families   |
+| Addresses |-----------|  Families   |
 +-----------+           +-------------+
 | family_id | PK        | family_id   | PK
 | street    |           | family_name |
@@ -8,8 +8,8 @@
 | state     |           | rent        |
 | zip_code  |           | family_size |
 +-----------+           +-------------+
-                             |     |
-                             | 1   | 1
+                             |     | 
+                             | 1   | 0
                              |     +-------------+   
                              | M                 | M
                        +-------------+      +-----------+
