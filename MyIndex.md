@@ -19,9 +19,9 @@ ZADD "MYINDEX:INDEX:卡拉馬佐夫兄弟" 11 "10. 經典文學\\[2009][俄羅�
 #### III. Programs 
 ```
 node src/scandisk.js 
-Usage: scandisk <Path to scan> <Prefix> <uid>
+Usage: scandisk <Path-to-scan> <Index-Prefix> <uid>
 
-node src/scandisk.js F:\ HOME:TV-5T 10
+node src/scandisk.js "F:\" "HOME:TV-5T" 11
 ```
 
 
